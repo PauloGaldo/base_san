@@ -1,0 +1,14 @@
+/node_modules
+/build
+/dist
+
+/target
+/bin
+/.settings
+/.classpath
+/.project
+
+*.iml
+.idea
+
+.DS_Store
