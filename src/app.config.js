@@ -1,17 +1,11 @@
-(function () {
-    'use strict';
 
-    angular
-            .module('sanitas')
-            .config(Config);
+angular
+    .module('sanitas')
+    .config(Config);
 
-    Config.$inject = ['$locationProvider', '$urlRouterProvider'];
+Config.$inject = ['$locationProvider', '$urlRouterProvider'];
 
-    function Config($locationProvider, $urlRouterProvider) {
-        
-        $locationProvider.html5Mode(true);
-        $urlRouterProvider.otherwise("/");
-        
-    }
-
-})();
+function Config($locationProvider, $urlRouterProvider) {
+  $locationProvider.html5Mode(true);
+  $urlRouterProvider.otherwise('/');
+}

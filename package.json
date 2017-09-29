@@ -3,23 +3,38 @@
   "version": "1.0.0",
   "description": "Sanitas AngularJS",
   "main": "index.js",
+  "author": "NEORIS",
+  "license": "ISC",
   "scripts": {
-    "build": "rimraf dist && rimraf build && webpack --bail --progress --profile",
-    "server": "webpack-dev-server --history-api-fallback --inline --progress",
-    "test": "webpack",
-    "start": "yarn run server"
+    "build": "rimraf dist && rimraf build && webpack --bail --progress --profile --config ./dev-tools/webpack.config.prod.js",
+    "lint": "eslint src dev-tools --ext .js --fix",
+    "server": "webpack-dev-server --inline --progress --config ./dev-tools/webpack.config.dev.js",
+    "start": "npm run server",
+    "test": "webpack"
   },
   "keywords": [
     "angularjs",
     "webpack"
   ],
-  "author": "NEORIS",
-  "license": "ISC",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.5",
+    "angular": "^1.6.5",
+    "angular-animate": "^1.6.5",
+    "angular-cookies": "^1.6.5",
+    "angular-jwt": "^0.1.9",
+    "angular-local-storage": "^0.6.0",
+    "angular-messages": "^1.6.5",
+    "angular-sanitize": "^1.6.5",
+    "bootstrap": "^3.3.7",
+    "webpack-jquery-ui": "^1.0.0"
+  },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
+    "babel-eslint": "^8.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.4",
     "eslint": "^4.3.0",
+    "eslint-config-defaults": "^9.0.0",
     "exports-loader": "0.6.x",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
@@ -36,17 +51,5 @@
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.5.1",
     "zip-webpack-plugin": "^2.0.0"
-  },
-  "dependencies": {
-    "@uirouter/angularjs": "^1.0.5",
-    "angular": "^1.6.5",
-    "angular-animate": "^1.6.5",
-    "angular-cookies": "^1.6.5",
-    "angular-jwt": "^0.1.9",
-    "angular-local-storage": "^0.6.0",
-    "angular-messages": "^1.6.5",
-    "angular-sanitize": "^1.6.5",
-    "bootstrap": "^3.3.7",
-    "webpack-jquery-ui": "^1.0.0"
   }
 }
