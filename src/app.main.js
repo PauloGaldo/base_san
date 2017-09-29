@@ -1,12 +1,15 @@
-(function () {
-    'use strict';
+require('@uirouter/angularjs');
 
-    var angular = require('angular');
-    require('@uirouter/angularjs');
-    require('./features/home/home.main.js');
-    require('./features/home/home.config.js');
-    require('./features/home/home.controller.js');    
+const angular = require('angular');
 
-    angular.module("sanitas", ['ui.router', 'sanitas.home']);
+angular.module('sanitas', ['ui.router', 'sanitas.home']);
 
-})();
+/**
+ * Require each app dep
+ */
+require('./app.config.js');
+
+/**
+ * Require each main feature
+ */
+require('./features/home/home.main.js');

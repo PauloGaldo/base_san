@@ -1,27 +1,46 @@
 {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es6": true,
-        "node": true
-    },
-    "globals":{
-        "angular": true
-    },
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "sourceType": "module"
-    },
-    "rules": {
-        "no-const-assign": "warn",
-        "no-this-before-super": "warn",
-        "no-undef": "warn",
-        "no-unreachable": "warn",
-        "no-unused-vars": "warn",
-        "constructor-super": "warn",
-        "valid-typeof": "warn",
-        "semi": 0
-    }
+  "extends": [
+    "eslint:recommended"
+  ],
+  "rules": {
+    "array-bracket-spacing": 1,
+    "array-callback-return": 1,
+    "arrow-body-style": 1,
+    "arrow-parens": 0,
+    "arrow-spacing": 1,
+    "brace-style": [1, "1tbs", { "allowSingleLine": true }],
+    "comma-dangle": [1, {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "always-multiline"
+    }],
+    "eqeqeq": 1,
+    "indent": [1, 2, {
+      "MemberExpression": 2
+    }],
+    "linebreak-style": 1,
+    "newline-after-var": 1,
+    "newline-before-return": 1,
+    "no-multiple-empty-lines": [1, { "max": 1 }],
+    "no-trailing-spaces": 1,
+    "object-curly-newline": [1, {
+      "minProperties": 1
+    }],
+    "object-curly-spacing": [1, "always"],
+    "object-property-newline": 1,
+    "object-shorthand": 1,
+    "quotes": [1, "single"],
+    "semi": [1, "always"]
+  },
+  "globals": {
+    "angular": true
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "node": true,
+    "es6": true
+  }
 }

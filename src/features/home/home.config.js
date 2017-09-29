@@ -1,22 +1,15 @@
-(function () {
-    'use strict';
+angular
+    .module('sanitas.home')
+    .config(Config);
 
-    angular
-            .module('sanitas.home')
-            .config(Config);
+Config.$inject = ['$stateProvider'];
 
-    Config.$inject = ['$stateProvider'];
-
-    function Config($stateProvider) {
-
-        $stateProvider
-                .state("home", {
-                    url: "/",
-                    template: require("features/home/home.html"),
-                    controller: "HomeController",
-                    controllerAs: "vm"
-                });
-
-    }
-
-})();
+function Config($stateProvider) {
+  $stateProvider
+      .state('home', {
+        url: '/',
+        template: require('features/home/home.html'),
+        controller: 'HomeController',
+        controllerAs: 'vm',
+      });
+}
